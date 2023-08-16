@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <nav class="p-5 bg-[#1b303a] text-white">
+        <div class="nav-wrapper w-5/6 flex items-center justify-between mx-auto">
+            <div class="left-nav flex gap-5 items-center">
+                <div class="logo text-lg sm:text-3xl font-serif font-bold ">Lyrics</div>
+                <div class="navlist">
+                    <ul class="flex gap-2 sm:gap-5 sm:text-lg">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-nav">
+                <ul class="flex gap-2 sm:gap-5 sm:text-lg">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="songs-container-wrapper h-[75vh] bg-[#16323f]">
+        <div class="songs-container w-5/6 h-full mx-auto flex items-center justify-center bg-[#16323f]">
+            <div class="songs flex-1 h-full p-4">
+                <h2 class="text-lg sm:text-xl md:text-3xl font-semibold font-serif text-white">Trending Now</h2>
+                <div id="songList" class="song-list mt-2 h-[450px] overflow-y-auto">
+                    <!-- <div class="song-item flex items-center justify-between bg-slate-200 my-1 rounded-md bg-[#063348]">
+                        <img src="../Music Cover/2002.jpg" alt="2002 cover" class="h-[75px] w-[75px] ml-2">
+                        <h2 class="song-name">2002</h2>
+                        <div class="icon mr-2"><i class="fa-solid fa-play text-lg cursor-pointer px-1"></i></div>
+                    </div> -->
+                </div>
+            </div>
+            <div id="songDetails" class="song-details flex-1 h-full p-5">
+                <!-- <div class="details-card w-fit mx-auto flex flex-col">
+                    <img id="songDetailsImg" src="" alt="" class="h-96 w-96 rounded-t-md">
+                    <div class="info p-3 bg-slate-200 text-lg font-semibold rounded-b-md">
+                        <h2 id="songDetailName"></h2>
+                        <h2 id="songDetailBy">Song By: song by</h2>
+                        <h2 id="songDetailAlbum">Album: album</h2>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <section class="song-player bg-[#142e3a] sticky bottom-0 left-0 h-[100px] p-2">
+        <div class="wrapper w-5/6 mx-auto">
+            <div class="flex items-center justify-center">
+                <span id="songCurrentTime" class="px-2 text-white">0</span><input type="range" min="0" max="100" value="0" class="w-[90%]" id="progressBar" /><span id="songDuration" class="px-2 text-white"></span>
+            </div>
+            <div class="controls text-xl flex justify-center">
+                <span><i class="fa-solid fa-backward-step px-2 cursor-pointer" id="playerBackward"></i></span>
+                <span><i class="fa-solid fa-play px-2 cursor-pointer" id="playerMaster"></i></span>
+                <span><i class="fa-solid fa-forward-step px-2 cursor-pointer" id="playerForward"></i></span>
+            </div>
+            <img src="../Music Cover/gif3.gif" id="gif" alt=""
+                class="w-full h-10 opacity-0 transition-opacity duration-400 ease-in">
+        </div>
+    </section>
+
+    <script src="./script.js" type="module"></script>
+</body>
+
+</html>
